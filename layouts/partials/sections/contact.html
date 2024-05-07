@@ -1,0 +1,11 @@
+{{ $sectionID := replace (lower .section.name) " " "-"  }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container anchor p-lg-5" id="{{ $sectionID }}">
+  <div class="text-center">
+    <h3>Need a hand with your IT problem? Reach out now.</h3>
+    <a href="TODO" class="button" style="vertical-align:middle"><span>Schedule an appointment</span></a>
+  </div>
+</div>
