@@ -123,6 +123,12 @@
                                 {{ range .custonSections }}
                                     <h6 class="text-heading">{{ .name }}: </h6>
                                     <div class="custom-content">{{ .content | markdownify }}</div>
+				    {{ $image := resources.Get .image}}
+				    {{ if $image }}
+				    <div class="image-holder">
+                                      <img class="image" src="{{ $image.RelPermalink }}" alt="{{ .name }}" width="450" height="350"/>
+				    </div>
+				    {{ end }}
                                 {{ end }}
                             </div>
                             {{ end }}
