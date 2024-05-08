@@ -21,16 +21,16 @@
 {{ end }}
 
 
-{{ $authorImage:= "/images/default-avatar.png" }}
-{{ if $author.image }}
-  {{ $authorImage = $author.image }}
-{{ end }}
-{{ $authorImage := resources.Get $authorImage }}
+<!-- {{ $authorImage:= "/images/default-avatar.png" }} -->
+<!-- {{ if $author.image }} -->
+<!--   {{ $authorImage = $author.image }} -->
+<!-- {{ end }} -->
+<!-- {{ $authorImage := resources.Get $authorImage }} -->
 
-{{/* apply image processing. don't use "Fit" in svg or gif because its not supported */}}
-{{ if and $authorImage (and (ne $authorImage.MediaType.SubType "svg") ( ne $authorImage.MediaType.SubType "gif")) }}
-  {{ $authorImage = $authorImage.Fit "148x148" }}
-{{ end }}
+<!-- {{/* apply image processing. don't use "Fit" in svg or gif because its not supported */}} -->
+<!-- {{ if and $authorImage (and (ne $authorImage.MediaType.SubType "svg") ( ne $authorImage.MediaType.SubType "gif")) }} -->
+<!--   {{ $authorImage = $authorImage.Fit "148x148" }} -->
+<!-- {{ end }} -->
 {{/* get file that matches the filename as specified as src="" in shortcode */}}
 {{ $src := resources.Get $backgroundImage }}
 
@@ -107,10 +107,10 @@
     class="background container-fluid"
   ></div>
   <div class="container content text-center">
-    <img src="{{ $authorImage.RelPermalink }}"
-      class="rounded-circle mx-auto d-block img-fluid"
-      alt="Author Image"
-    />
+    <!-- <img src="{{ $authorImage.RelPermalink }}" -->
+    <!--   class="rounded-circle mx-auto d-block img-fluid" -->
+    <!--   alt="Author Image" -->
+    <!-- /> -->
     <h1 class="greeting"> {{ $author.greeting }} {{ $name }}</h1>
     {{ if $author.subtitle }}
       <h2 class="greeting-subtitle">{{ $author.subtitle }}</h2>
