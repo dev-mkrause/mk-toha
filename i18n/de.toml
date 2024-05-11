@@ -3,7 +3,7 @@
 other = "Home"
 
 [posts]
-other = "Beiträge"
+other = "Blog"
 
 [toc_heading]
 other = "Inhaltsverzeichnis"
@@ -24,7 +24,7 @@ other = "Mein Lebenslauf"
 other = "Navigation"
 
 [contact_me]
-other = "Kontaktiere mich:"
+other = "Kontakt"
 
 [email]
 other = "E-Mail"
